@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "id": "project.current-project",
+      "label": "Current Project",
+      "type": "project"
+    },
+    {
+      "id": "doc.project-md",
+      "label": "PROJECT.md",
+      "type": "doc"
+    },
+    {
+      "id": "doc.rules-md",
+      "label": "RULES.md",
+      "type": "doc"
+    },
+    {
+      "id": "doc.graph-md",
+      "label": "GRAPH.md",
+      "type": "doc"
+    },
+    {
+      "id": "design_system.design-system",
+      "label": "design-system/",
+      "type": "design_system"
+    },
+    {
+      "id": "app.app",
+      "label": "app/",
+      "type": "app"
+    },
+    {
+      "id": "tool.tools-start-py",
+      "label": "tools/start.py",
+      "type": "tool"
+    },
+    {
+      "id": "role.agent",
+      "label": "Agent",
+      "type": "role"
+    },
+    {
+      "id": "role.team-lead",
+      "label": "Team Lead",
+      "type": "role"
+    },
+    {
+      "id": "role.tc",
+      "label": "TC",
+      "type": "role"
+    },
+    {
+      "id": "role.admin",
+      "label": "Admin",
+      "type": "role"
+    }
+  ],
+  "edges": [
+    {
+      "source": "project.current-project",
+      "target": "role.team-lead",
+      "type": "has_role"
+    },
+    {
+      "source": "project.current-project",
+      "target": "role.admin",
+      "type": "has_role"
+    },
+    {
+      "source": "doc.rules-md",
+      "target": "project.current-project",
+      "type": "governs"
+    },
+    {
+      "source": "project.current-project",
+      "target": "role.tc",
+      "type": "has_role"
+    },
+    {
+      "source": "project.current-project",
+      "target": "role.agent",
+      "type": "has_role"
+    },
+    {
+      "source": "doc.project-md",
+      "target": "project.current-project",
+      "type": "describes"
+    },
+    {
+      "source": "project.current-project",
+      "target": "app.app",
+      "type": "contains"
+    },
+    {
+      "source": "project.current-project",
+      "target": "design_system.design-system",
+      "type": "uses"
+    },
+    {
+      "source": "doc.graph-md",
+      "target": "project.current-project",
+      "type": "maps"
+    },
+    {
+      "source": "project.current-project",
+      "target": "tool.tools-start-py",
+      "type": "starts_localhost"
+    }
+  ]
+}
